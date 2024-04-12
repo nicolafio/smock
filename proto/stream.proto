@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+service GameStateStreaming {
+    rpc Subscribe(SubscribeRequest) returns (stream GameStateUpdate) {}
+}
+
+message SubscribeRequest {
+    uint32 updates_per_interval = 1;
+    uint32 interval_millis = 2;
+}
+
+message GameStateUpdate {
+    uint32 score = 1;
+    uint32 record = 2;
+    message Player {
+        double x = 1;
+        double y = 2;
+    }
+}

@@ -1,0 +1,6 @@
+[submodule "1-mvp"]
+	path = smocc
+	url = git@nicolaf.io:dev/smocc.git
+[submodule "smoc"]
+	path = smoc
+	url = git@nicolaf.io:joy/smoc.git
